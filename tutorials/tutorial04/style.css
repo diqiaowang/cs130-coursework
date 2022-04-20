@@ -1,0 +1,97 @@
+body {
+   margin: 0;
+   font-family: 'Arial';
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 2fr;
+   grid-template-areas: 
+      "menu1 . menu2 menu2"
+      "card1 card2 card3 aside"
+      "main main main aside"; 
+
+   min-height: 100vh;
+   grid-row-gap: 20px;
+   grid-column-gap: 10px;
+}
+
+article, aside, section, main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.menu1 {
+   grid-area: menu1;
+   background-color: pink;
+}
+
+.menu2 {
+   grid-area: menu2;
+   background-color: aliceblue;
+}
+
+.card1 {
+   grid-area: card1;
+   background-color: gold;
+}
+
+.card2 {
+   grid-area: card2;
+   background-color: gold;
+}
+
+.card3 {
+   grid-area: card3;
+   background-color: gold;
+}
+
+.main {
+   grid-area: main;
+   background-color: yellowgreen;
+}
+
+.aside {
+   grid-area: aside;
+   background-color: blanchedalmond;
+}
+
+@media (max-width: 1024px) {
+   .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr 2fr 2fr 4fr;
+      grid-template-areas: 
+         "menu1 menu2"
+         "aside aside"
+         "card1 card2"
+         "card3 card3"
+         "main main"; 
+   
+      min-height: 100vh;
+      grid-row-gap: 20px;
+      grid-column-gap: 10px;
+   }
+}
+
+@media (max-width: 720px) {
+   .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 2fr 1fr 2fr 2fr 2fr 4fr;
+      grid-template-areas: 
+         "menu1"
+         "menu2"
+         "aside"
+         "card1"
+         "card2"
+         "card3"
+         "main"; 
+   
+      min-height: 100vh;
+      grid-row-gap: 20px;
+      grid-column-gap: 10px;
+   }
+}

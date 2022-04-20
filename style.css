@@ -4,14 +4,12 @@
 }
 
 head {
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=My+Soul&display=swap');
-    </style>
+    @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap')
 }
 
 body {
     margin: 0px;
-    font-family: 'My Soul', cursive;
+    font-family: 'Abel', sans-serif;
 }
 
 header, section {
