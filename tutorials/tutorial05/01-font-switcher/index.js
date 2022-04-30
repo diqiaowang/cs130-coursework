@@ -1,15 +1,21 @@
+let currentFont = 1;
+
 const makeBigger = () => {
    /*alert('make bigger!');*/
-   document.querySelector('div.content').style.fontSize = '40px';
-   document.querySelector('h1').style.fontSize = '40px';
+   currentFont += 0.1
+   setFont();
 };
 
 const makeSmaller = () => {
   /* alert('make smaller!');*/
-   document.querySelector('div.content').style.fontSize = '10px';
-   document.querySelector('h1').style.fontSize = '10px';
+  currentFont -= 0.1
+  setFont();
 };
 
+const setFont =() => {
+   document.querySelector('.content').style.fontSize = `${currentFont}em`;
+   document.querySelector('h1').style.fontSize = `${currentFont + 0.5}em`;
+};
 
 document.querySelector('#a1').addEventListener('click', makeBigger);
 document.querySelector('#a2').addEventListener('click', makeSmaller);
