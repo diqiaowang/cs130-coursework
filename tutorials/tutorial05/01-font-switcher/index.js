@@ -7,7 +7,7 @@ const makeBigger = () => {
 const makeSmaller = () => {
   /* alert('make smaller!');*/
    document.querySelector('div.content').style.fontSize = '10px';
-   document.querySelector('h1').style.fontSizeAdjust = '10px';
+   document.querySelector('h1').style.fontSize = '10px';
 };
 
 
