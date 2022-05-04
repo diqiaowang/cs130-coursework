@@ -82,7 +82,22 @@ footer {
 
 /* Your Code Here */
 
+h1{
+    margin-bottom: 60px;
+}
 
+.leftsides {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.leftsides:hover {
+    color: grey;
+}
+
+#library {
+    border-left: 5px solid green;
+}
 
 /********************************/
 /* Part B: Header & Nav Styling */
@@ -90,9 +105,67 @@ footer {
 
 /* Your Code Here */
 
+header {
+    display: flexbox;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
+#profile {
+    background-color: rgb(62, 57, 57);
+    margin-left: 100px;
+    margin-right: 60px;
+    margin-top: 40px;
+    padding: 8px 30px;
+    border: 2px solid rgb(62, 57, 57);
+    border-radius: 30px 30px 30px 30px;
+}
 
+#profile:hover {
+    color:lightgray;
+}
 
+#upgrade {
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 40px;
+    padding: 8px 30px;
+    border: 2px solid white;
+    border-radius: 30px 30px 30px 30px;
+}
+
+#upgrade:hover {
+    color:lightgray;
+}
+
+nav {
+    display: flexbox;
+    flex-direction: row;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#playlists {
+    margin-left: 20px;
+    margin-right: 80px;
+}
+
+#playlists:hover{
+    border-bottom: 5px solid green;
+}
+
+#albums {
+    margin-right: 80px;
+}
+
+#albums:hover{
+    border-bottom: 5px solid green;
+}
+
+#artists {
+    border-bottom: 5px solid green;
+}
 
 /*************************/
 /* Part C: Artists Panel */
@@ -100,8 +173,109 @@ footer {
 
 /* Your Code Here */
 
+.artist-card {
+    width: 100%;
+    height: 400px;
+}
 
+.artist-card img { 
+    width: 70%;
+    border-radius: 100%;
+    display: flexbox;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 15%;
+}
 
+article {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "a0 a1 a2 a3 a4"
+        "a5 a6 a7 a8 a9";
+   grid-row-gap: 20px;
+   grid-column-gap: 10px;
+}
+
+.a0 {
+    grid-area: a0;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a1 {
+    grid-area: a1;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a2 {
+    grid-area: a2;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a3 {
+    grid-area: a3;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a4 {
+    grid-area: a4;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a5 {
+    grid-area: a5;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a6 {
+    grid-area: a6;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a7 {
+    grid-area: a7;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a8 {
+    grid-area: a8;
+    background-color: #222;
+    border-radius: 15px;
+}
+.a9 {
+    grid-area: a9;
+    background-color: #222;
+    border-radius: 15px;
+}
+
+h2 {
+    margin-left: 20px;
+    font-size: large;
+}
+
+p {
+    margin-left: 20px;
+    color: lightgray;
+    margin-bottom: 40px;
+}
+
+.play-button {
+    display: none; 
+    color: white;
+    background-color: green;
+    border-radius: 100%;
+    border-style: hidden;
+    min-height: 40px;
+    min-width: 40px;
+    margin-left: 150px;
+    margin-bottom: 100px; 
+}
+
+.artist-card:hover .play-button{
+    display: block;
+}
 
 /**************************/
 /* Part D: Responsive UIs */
@@ -109,4 +283,41 @@ footer {
 
 /* Your Code Here */
 
+@media (max-width: 1024px) {
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "a0 a1 a2"
+            "a3 a4 a5"
+            "a6 a7 a8"
+            "a9 . ."}
+    }
+
+@media (max-width: 720px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-areas: 
+            "a0 a1"
+            "a2 a3"
+            "a4 a5"
+            "a6 a7"
+            "a8 a9"
+        }
+    
+    aside {
+        display: none;
+        }
+
+    footer {
+        width: auto;
+    }
+
+    #upgrade {
+        display: none;
+    }
+    }
 
