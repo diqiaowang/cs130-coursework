@@ -32,7 +32,7 @@ const getAlbums = (term) => {
 
 const getArtistHTML = (artist) => {
     if (!artist.image_url) {
-        artist.image.url = https://qph.cf2.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd
+        // artist.image.url = https://qph.cf2.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd
     return `<section class="artist-card" id="${artist.id}">
     <div>
         <img src="${artist.image_url}">
@@ -69,7 +69,7 @@ const getArtist = (term) => {
 const handleTrackClick = (ev) => {
     const previewUrl = ev.currentTarget.getAttribute('data-preview-track');
     console.log(previewUrl);
-}
+};
 
 document.querySelector('#search').onkeyup = (ev) => {
     // Number 13 is the "Enter" key on the keyboard

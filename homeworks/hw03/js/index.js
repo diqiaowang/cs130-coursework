@@ -35,32 +35,47 @@ const initScreen = () => {
     images.forEach((image, idx) => {
         document.querySelector('.cards').innerHTML += `
         <li class="card">
-            ,div class =
-            // <button class="image" 
-            //     style="background-image:url('${image}')"
-            //     data-index=${idx}"
-            //     aria-label="Displays image ${idx} in the main panel."></button>
+            <button class="image" 
+                onclick = "handleThumbnailClick(event)"
+                 style="background-image:url('${image}')"
+                 data-index="${idx}"
+                 aria-label="Displays image ${idx} in the main panel."></button>
         </li>`;
     });
 };
 
+const handleThumbnailClick = (ev) => {
+    const elem = ev.currentTarget;
+    console.log(elem);
+    const bgImage = elem.style.backgroundImage;
+    document.querySelector('.featured_image').style.backgroundImage = bgImage;
+    currentIndex = Number(elem.getAttribute('data-index'));
+}
 
 const previous = () => {
-    currentIndex -= 1;
-    console.log('Show previous image, currentIndex');
-    console.log(images [currentIndex]);
+    if (currentIndex > 0) {
+        currentIndex -= 1;
+    } else {
+        currentIndex = 7;
+    }
+    console.log('Show previous image', currentIndex);
+    console.log(images[currentIndex]);
+    document.querySelector('.featured_image').style.backgroundImage = `
+        url('${images[currentIndex]}')
+    `;
 };
 
 const next = () => {
-    if (currentIndex < 8) {
+    if (currentIndex < 7) {
         currentIndex += 1;
     } else {
         currentIndex = 0;
     }
-    console.log('Show next image, currentIndex');
-    console.log(images [currentIndex]);
+    console.log('Show next image', currentIndex);
+    console.log(images[currentIndex]);
     document.querySelector('.featured_image').style.backgroundImage = `
-        url('${images[currentIndex]}')`
+        url('${images[currentIndex]}')
+    `;
 };
 
 
