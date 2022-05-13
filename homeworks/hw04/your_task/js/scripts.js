@@ -32,11 +32,11 @@ const getAlbums = (term) => {
 
 const getArtistHTML = (artist) => {
     if (!artist.image_url) {
-        // artist.image.url = https://qph.cf2.quoracdn.net/main-qimg-2b21b9dd05c757fe30231fac65b504dd
-    return `<section class="artist-card" id="${artist.id}">
+        // artist.image.url = https://www.clipartmax.com/png/middle/473-4734552_blue-morpho-butterfly-clipart.png
+    } return `<section class="artist-card" id="${artist.id}">
     <div>
         <img src="${artist.image_url}">
-        <h2>${artist.nname}</h2>
+        <h2>${artist.name}</h2>
         <div class="footer">
             <a href="${artist.spotify_url}" target="_blank">
                 view on spotify
@@ -78,4 +78,4 @@ document.querySelector('#search').onkeyup = (ev) => {
         ev.preventDefault();
         search();
     }
-};
+}
