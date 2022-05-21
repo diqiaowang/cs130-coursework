@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+
+document, body {
+   margin: 0px;
+}
+
+body * {
+   box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav {
+   display: flex;
+   justify-content: center;
+   height: 100%;
+}
+
+header {
+    font-family: 'Abel', sans-serif;
+    font-size: xx-large;
+    align-items: center;
+    color: #FFD700;
+    border-bottom: solid 1px black;
+    background-color: #191970;
+    height: 130px;
+}
+
+nav {
+    background-color: black;
+    height: 50px;
+    border-bottom: solid 1px black;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+button {
+    background-color: transparent;
+    border: 0px;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: 'Abel', sans-serif;
+    color: #FFD700;
+    margin-right: 15px;
+}
+
+
+.content {
+   background-color: #191970;
+   padding: 40px;
+   font-size: 1.4em;
+   font-family: 'Abel', sans-serif;
+   color: #FFD700;
+   min-height: 100vh;
+}
+/* different city styles */
+
+.chicago header {
+    background: darkred;
+    color: white;
+    font-family: 'Abel', sans-serif;
+ }
+ .chicago button {
+     color: #D2691E;
+ }
+ .chicago .content {
+     color: white;
+ }
+ .chicago .content {
+    background: darkred;
+    line-height: 1.6em;
+ }
+ .chicago header, .chicago nav {
+     border-bottom: solid 1px darkred;
+ }
+ 
+  .la header {
+     background: #f6efa6;
+     color: #66B3BA;
+ }
+ .la button {
+     color: #E0FFFF;
+ }
+ .la .content {
+     background: #f6efa6;
+     color: #66B3BA;
+ }
+ .la nav {
+     background-color: #FFA500;
+ }
+ 
+ .la header, .la nav {
+     border-bottom: solid 1px #E0FFFF;
+ }
+
+.nyc header {
+    background: #228B22;
+    color: #FFB6C1;
+}
+.nyc button {
+    color: #228B22	;
+}
+.nyc .content {
+    background: #228B22;
+    color: #FFB6C1	;
+}
+.nyc nav {
+    background-color: #FFB6C1;
+}
+
+.nyc header, .nyc nav {
+    border-bottom: solid 1px #228B22;
+}
+
+.pictures {
+    width: 100%;
+    height: 400px;
+}
+
+.pictures img { 
+    width: 70%;
+    display: flexbox;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 15%;
+}
+
+article {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "a0 a1 a2 a3 a4";
+   grid-row-gap: 20px;
+   grid-column-gap: 10px;
+}
+
+.a0 {
+    grid-area: a0;
+    background-color: darkred;
+    border-radius: 15px;
+}
+.a1 {
+    grid-area: a1;
+    background-color: darkred;
+    border-radius: 15px;
+}
+.a2 {
+    grid-area: a2;
+    background-color: darkred;
+    border-radius: 15px;
+}
+.a3 {
+    grid-area: a3;
+    background-color: darkred;
+    border-radius: 15px;
+}
+.a4 {
+    grid-area: a4;
+    background-color: darkred;
+    border-radius: 15px;
+}
+
+h2 {
+    margin-left: 20px;
+    font-size: large;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
