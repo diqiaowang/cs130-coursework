@@ -138,7 +138,7 @@ const handleTrackClick = (ev) => {
 };
 
 document.querySelector('#search').onkeyup = (ev) => {
-    // Number 13 is the "Enter" key on the keyboard
+    aria-label="search artists"
     console.log(ev.keyCode);
     if (ev.keyCode === 13) {
         ev.preventDefault();
