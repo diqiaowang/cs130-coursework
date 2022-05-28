@@ -119,22 +119,22 @@ const getArtist = (term) => {
 };  
 
 const handleTrackClick = (ev) => {
-    const previewUrl = ev.currentTarget.getAttribute('id');
-    const previewUrl = ev.target.getAttribute('data-preview-track');
-    console.log("preview url is" + previewUrl);
-    audioPlayer.setAudioFile(previewUrl)
-    audioPlayer.play()
-    document.querySelector('footer').innerHTML += `
-        <div id="current-track" class="track-item" data-preview-track="xxx">
-                <img src="${track.album.image_url}">
-                <i class="fas play-track fa-pause" aria-hidden="true"></i>
-                <div class="label">
-                    <h2>${track.name}</h2>
-                    <p>
-                        ${track.artist.name}
-                    </p>
-                </div>
-        </div>`;
+    // const previewUrl = ev.currentTarget.getAttribute('id');
+    // const previewUrl = ev.target.getAttribute('data-preview-track');
+    // console.log("preview url is" + previewUrl);
+    // audioPlayer.setAudioFile(previewUrl)
+    // audioPlayer.play()
+    // document.querySelector('footer').innerHTML += `
+    //     <div id="current-track" class="track-item" data-preview-track="xxx">
+    //             <img src="${track.album.image_url}">
+    //             <i class="fas play-track fa-pause" aria-hidden="true"></i>
+    //             <div class="label">
+    //                 <h2>${track.name}</h2>
+    //                 <p>
+    //                     ${track.artist.name}
+    //                 </p>
+    //             </div>
+    //     </div>`;
 };
 
 document.querySelector('#search').onkeyup = (ev) => {
