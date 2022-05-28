@@ -124,14 +124,12 @@ button {
 
 .pictures img { 
     width: 70%;
-    display: flexbox;
-    justify-content: center;
-    margin-top: 20px;
+    margin-top: 20%;
     margin-left: 15%;
 }
 
 article {
-    margin-top: 50px;
+    margin-top: 60px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -141,38 +139,107 @@ article {
    grid-column-gap: 10px;
 }
 
-.a0 {
+.chicago .a0 {
     grid-area: a0;
     background-color: darkred;
     border-radius: 15px;
 }
-.a1 {
+.chicago .a1 {
     grid-area: a1;
     background-color: darkred;
     border-radius: 15px;
 }
-.a2 {
+.chicago .a2 {
     grid-area: a2;
     background-color: darkred;
     border-radius: 15px;
 }
-.a3 {
+.chicago .a3 {
     grid-area: a3;
     background-color: darkred;
     border-radius: 15px;
 }
-.a4 {
+.chicago .a4 {
     grid-area: a4;
     background-color: darkred;
     border-radius: 15px;
 }
 
-h2 {
+.chicago h2 {
     margin-left: 20px;
     font-size: large;
     color: white;
+    font-family: 'Abel', sans-serif;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+}
+
+.la .a0 {
+    grid-area: a0;
+    background-color: #FFA500;
+    border-radius: 15px;
+}
+.la .a1 {
+    grid-area: a1;
+    background-color: #FFA500;
+    border-radius: 15px;
+}
+.la .a2 {
+    grid-area: a2;
+    background-color: #FFA500;
+    border-radius: 15px;
+}
+.la .a3 {
+    grid-area: a3;
+    background-color: #FFA500;
+    border-radius: 15px;
+}
+.la .a4 {
+    grid-area: a4;
+    background-color: #FFA500;
+    border-radius: 15px;
+}
+
+.la h2 {
+    margin-left: 20px;
+    font-size: large;
+    color: white;
+    font-family: 'Abel', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.nyc .a0 {
+    grid-area: a0;
+    background-color: #228B22;
+    border-radius: 15px;
+}
+.nyc .a1 {
+    grid-area: a1;
+    background-color: #228B22;
+    border-radius: 15px;
+}
+.nyc .a2 {
+    grid-area: a2;
+    background-color: #228B22;
+    border-radius: 15px;
+}
+.nyc .a3 {
+    grid-area: a3;
+    background-color: #228B22;
+    border-radius: 15px;
+}
+.nyc .a4 {
+    grid-area: a4;
+    background-color: #228B22;
+    border-radius: 15px;
+}
+
+.nyc h2 {
+    margin-left: 20px;
+    font-size: large;
+    color: #FFB6C1;
+    font-family: 'Abel', sans-serif;
+    display: flex;
+    justify-content: center;
 }
