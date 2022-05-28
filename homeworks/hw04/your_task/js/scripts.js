@@ -5,7 +5,6 @@ const audioFile = 'https://p.scdn.co/mp3-preview/bfead324ff26bdd67bb793114f7ad3a
 const audioPlayer = AudioPlayer('.player', audioFile);
 
 const search = (ev) => {
-    aria-label = "search artists"
     const term = document.querySelector('#search').value;
     console.log('search for:', term);
     // issue three Spotify queries at once...
