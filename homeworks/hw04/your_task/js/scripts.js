@@ -36,7 +36,7 @@ const getTracks = (term) => {
                 document.querySelector('#tracks').innerHTML += `
                 <button class="track-item preview" id="test" data-preview-track="${track.preview_url}" 
                 onclick="handleTrackClick()">
-                        <img src="${track.album.image_url}">
+                        <img src="${track.album.image_url}" alt="a photo of ${track.name}">
                         <i class="fas play-track fa-play" aria-hidden="true"></i>
                         <div class="label">
                             <h2>${track.name}</h2>
@@ -68,7 +68,7 @@ const getAlbums = (term) => {
                 document.querySelector('#albums').innerHTML += `
                 <section class="album-card" id="${album.id}">
                         <div>
-                            <img src="${album.image_url}">
+                            <img src="${album.image_url}" alt="a photo of ${album.name}">
                             <h2>${album.name}</h2>
                             <div class="footer">
                                 <a href="${album.spotify_url}" target="_blank">
@@ -87,7 +87,7 @@ const getArtistHTML = (artist) => {
         // artist.image.url = https://www.clipartmax.com/png/middle/473-4734552_blue-morpho-butterfly-clipart.png
     } return `<section class="artist-card" id="${artist.id}">
     <div>
-        <img src="${artist.image_url}">
+        <img src="${artist.image_url}" alt="a photo of ${artist.name}">
         <h2>${artist.name}</h2>
         <div class="footer">
             <a href="${artist.spotify_url}" target="_blank">
