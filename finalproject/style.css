@@ -25,10 +25,19 @@ header {
     font-family: 'Abel', sans-serif;
     font-size: xx-large;
     align-items: center;
+    justify-content: space-between;
     color: #FFD700;
     border-bottom: solid 1px black;
     background-color: #191970;
     height: 130px;
+}
+
+img {
+    margin-right: 3%;
+}
+
+h1{
+    margin-left: 5%;
 }
 
 nav {

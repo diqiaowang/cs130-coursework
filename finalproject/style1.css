@@ -15,6 +15,7 @@ body * {
     flex-direction: column;
 }
 
+
 header, nav {
    display: flex;
    justify-content: center;
@@ -25,10 +26,19 @@ header {
     font-family: 'Abel', sans-serif;
     font-size: x-large;
     align-items: center;
+    justify-content: space-between;
     color: white;
     border-bottom: solid 1px black;
     background-color: darkred;
     height: 130px;
+}
+
+iframe {
+    margin-right: 3%;
+}
+
+h1{
+    margin-left: 5%;
 }
 
 nav {
@@ -144,4 +154,3 @@ h2 {
     margin-top: 15%;
   }
   
-
