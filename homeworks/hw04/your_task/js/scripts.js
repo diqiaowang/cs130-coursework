@@ -17,9 +17,7 @@ const search = (ev) => {
 }
 
 const getTracks = (term) => {
-    document.querySelector('#tracks').innerHTML = "";
-
-    console.log('about to fetch!');    
+    document.querySelector('#tracks').innerHTML = "";  
     fetch('https://www.apitutor.org/spotify/simple/v1/search?type=track&limit=5&q=' + term)
         .then(response => response.json())
         .then(tracks => {
@@ -31,11 +29,9 @@ const getTracks = (term) => {
             }
 
             for (const track of tracks) {
-                console.log(track)
-                console.log("preview url is" + track.preview_url);
                 document.querySelector('#tracks').innerHTML += `
                 <button class="track-item preview" id="test" data-preview-track="${track.preview_url}" 
-                onclick="handleTrackClick()">
+                onclick="handleTrackClick(event)">
                         <img src="${track.album.image_url}" alt="a photo of ${track.name}">
                         <i class="fas play-track fa-play" aria-hidden="true"></i>
                         <div class="label">
@@ -118,24 +114,12 @@ const getArtist = (term) => {
     })
 };  
 
-// const handleTrackClick = (ev) => {
-//     const previewUrl = ev.currentTarget.getAttribute('id');
-//     const previewUrl = ev.target.getAttribute('data-preview-track');
-//     console.log("preview url is" + previewUrl);
-//     audioPlayer.setAudioFile(previewUrl)
-//     audioPlayer.play()
-//     document.querySelector('footer').innerHTML += `
-//         <div id="current-track" class="track-item" data-preview-track="xxx">
-//                 <img src="${track.album.image_url}">
-//                 <i class="fas play-track fa-pause" aria-hidden="true"></i>
-//                 <div class="label">
-//                     <h2>${track.name}</h2>
-//                     <p>
-//                         ${track.artist.name}
-//                     </p>
-//                 </div>
-//         </div>`;
-// };
+const handleTrackClick = (ev) => {
+    const preview_url = ev.currentTarget.getAttribute("data-preview-track");
+    document.querySelector('footer .track-item').innerHTML = ev.currentTarget.innerHTML;
+    audioPlayer.setAudioFile(preview_url);
+    audioPlayer.play();
+};
 
 document.querySelector('#search').onkeyup = (ev) => {
     console.log(ev.keyCode);

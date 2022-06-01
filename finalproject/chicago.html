@@ -3,9 +3,10 @@
 
 <head>
     <title>City Blogs</title>    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="scripts.js" defer></script>
+    <script type="text/javascript" src="audio-player.js" defer></script>
 </head>
 
 <body>
@@ -17,10 +18,10 @@
         </h1>  
     </header>
     <nav>
-        <button id="home" title="Go to 'home' page">Home</button>
-        <button id="chicago" title="Go to 'chicago' page">Chicago</button>
-        <button id="la" title="Go to 'los angeles' page">Los Angeles</button>
-        <button id="nyc" title="Go to 'new york city' page">New York City</button>
+        <a class="button" href="index.html" id="home">Home</a>
+        <a class="button" href="#" id="chicago">Chicago</a>
+        <a class="button" href="la.html" id="la">Los Angeles</a>
+        <a class="button" href="nyc.html" id="nyc">New York City</a>
     </nav>
 <article>
     <section class="pictures a0" tabindex="0">
@@ -32,9 +33,12 @@
                     <h2>POSH</h2>
                 </div>
             </div>
+            <div class="overlay">
+                <div class="text">613 N State St, Chicago, IL 60654</div>
+            </div>
         </div>
     </section>
-
+    
     <section class="pictures a1" tabindex="0">
         <div>
             <img 
@@ -43,6 +47,9 @@
                 <div>
                     <h2>The South Beach</h2>
                 </div>
+            </div>
+            <div class="overlay">
+                <div class="text">1811 Sheridan Rd, Evanston, IL</div>
             </div>
         </div>
     </section>
@@ -56,6 +63,9 @@
                     <h2>Navy Pier</h2>
                 </div>
             </div>
+            <div class="overlay">
+                <div class="text">600 E Grand Ave, Chicago, IL 60611</div>
+            </div>
         </div>
     </section>
 
@@ -67,6 +77,9 @@
                 <div>
                     <h2>The Bahai Temple</h2>
                 </div>
+            </div>
+            <div class="overlay">
+                <div class="text">100 Linden Ave, Wilmette, IL 60091</div>
             </div>
         </div>
     </section>
@@ -80,10 +93,14 @@
                     <h2>The Chicago River</h2>
                 </div>
             </div>
+            <div class="overlay">
+                <div class="text">99 Chicago Riverwalk, Chicago, IL 60601</div>
+            </div>
         </div>
     </section>
 
 </article>
+
 </body>
 
 </html>
