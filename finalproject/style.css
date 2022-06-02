@@ -68,3 +68,16 @@ nav {
    color: #FFD700;
    min-height: 100vh;
 }
+
+@media (max-width: 1024px) {
+    img {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    img {
+        display: none;
+    }
+}
+
